@@ -62,6 +62,11 @@ pnpm dev:api
 pnpm dev:web
 ```
 
+Run `./scripts/ci-local.sh` for the full local validation pipeline, or add
+`--skip-contracts` when Foundry is unavailable. The runner uses a writable uv
+cache under `/tmp` by default and does not perform live-provider or execution
+operations.
+
 Visit `http://localhost:3000`. The decision desk defaults to RECORDED evidence
 independently of the API's default mode. Choose LIVE explicitly to fetch market
 data; failed live requests never silently fall back to fixtures.
